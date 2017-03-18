@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="weui_grids">
+    <a class="weui_grid" *ngFor="let e of model" (click)="openPage(e)">
+      <div class="weui_grid_icon">
+        <img src="{{e.icon}}" alt="">
+      </div>
+      <p class="weui_grid_label">
+        {{e.title}}
+      </p>
+    </a>
+  </div>
+</ion-content>
+
+

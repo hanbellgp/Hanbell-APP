@@ -1,0 +1,44 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>客户资料</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      简称：{{currentEntity.cusna}}
+    </ion-item>
+    <ion-item>
+      编号：{{currentEntity.cusno}}
+    </ion-item>
+    <ion-item>
+      全称：{{currentEntity.cusds}}
+      <p>{{currentEntity.address1}}</p>
+    </ion-item>
+    <ion-item>
+      电话：{{currentEntity.tel1}}
+    </ion-item>
+    <ion-item>
+      传真：{{currentEntity.fax}}
+    </ion-item>
+    <ion-item>
+      老板：{{currentEntity.boss}}
+    </ion-item>
+    <ion-item>
+      联系人：{{currentEntity.contactman}}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+

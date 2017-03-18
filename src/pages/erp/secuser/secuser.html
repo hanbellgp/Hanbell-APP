@@ -1,0 +1,39 @@
+<!--
+  Generated template for the Secuser page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>修改密码</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      {{service.secuser.username}}
+    </ion-list-header>
+    <ion-item>
+      <ion-label color="primary" stacked>原密码</ion-label>
+      <ion-input type="password" placeholder="原密码" [(ngModel)]="opwd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>新密码</ion-label>
+      <ion-input type="password" placeholder="新密码" [(ngModel)]="npwd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>新密码</ion-label>
+      <ion-input type="password" placeholder="再次输入新密码" [(ngModel)]="rpwd"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button color="primary" full (click)="submit();">提交</button>
+  </div>
+</ion-content>
