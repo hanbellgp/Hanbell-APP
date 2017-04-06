@@ -11,8 +11,8 @@ import {ItemKindComponent} from "../pages/erp/itemkind/itemkind.component";
 import {ItemCategoryComponent} from "../pages/erp/itemcategory/itemcategory.component";
 import {InvbalComponent} from "../pages/erp/invbal/invbal.component";
 import {PricingComponent} from "../pages/erp/pricing/pricing.component";
-import {SecuserComponent} from "../pages/erp/secuser/secuser.component";
 import {LeaveApplicationPage} from "../pages/efgp/leave-application/leave-application.page";
+import {OvertimeApplicationPage} from "../pages/efgp/overtime-application/overtime-application.page";
 
 
 @Injectable()
@@ -32,6 +32,7 @@ export class PageService extends SuperService<Page> {
     pages.push(new Page('零件库存', ItemCategoryComponent, './assets/img/parts-stock.png', InvbalComponent));
     pages.push(new Page('零件报价', ItemCategoryComponent, './assets/img/parts-pricing.png', PricingComponent));
     pages.push(new Page('请假申请', LeaveApplicationPage, './assets/img/key.png', null));
+    pages.push(new Page('加班申请', OvertimeApplicationPage, './assets/img/key.png', null));
     return pages;
 
   }

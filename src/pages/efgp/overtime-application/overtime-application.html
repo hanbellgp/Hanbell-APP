@@ -1,0 +1,81 @@
+<!--
+  Generated template for the OvertimeApplication page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>加班申请</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>加班类型</ion-label>
+      <ion-select [(ngModel)]="overtimeApplication.formType" multiple="false" cancelText="取消" okText="确定">
+        <ion-option *ngFor="let t of service.formTypeList" [value]="t.id">{{t.desc}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label>加班日期</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD"
+                    [(ngModel)]="overtimeApplicationDetail.date1" name="date1"
+                    required></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>开始时间</ion-label>
+      <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="overtimeApplicationDetail.time1"
+                    name="time1"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>截止时间</ion-label>
+      <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="overtimeApplicationDetail.time2"
+                    name="time2"></ion-datetime>
+    </ion-item>
+    <ion-item-group>
+      <ion-item-divider color="light">加班时数
+        <ion-badge item-right="">{{overtimeApplicationDetail.hour}}</ion-badge>
+      </ion-item-divider>
+      <ion-item>
+        <ion-range min="0.5" max="12" step="0.5" [(ngModel)]="overtimeApplicationDetail.hour" name="hour">
+          <ion-label range-left>0.5</ion-label>
+          <ion-label range-right>12</ion-label>
+        </ion-range>
+      </ion-item>
+    </ion-item-group>
+    <ion-item>
+      <ion-label>加班内容</ion-label>
+      <ion-textarea placeholder="请输入加班内容" rows="3" [(ngModel)]="overtimeApplicationDetail.content"
+                    name="content"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <button ion-button full (click)="submitDetail($event)">
+      添加
+    </button>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      加班明细
+    </ion-list-header>
+    <ion-item *ngFor="let e of overtimeApplication.detailList">
+      <ion-note>
+        {{e.date1}}
+      </ion-note>
+      <ion-badge item-right="">{{e.hour}}</ion-badge>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="submit($event)">
+    提交
+  </button>
+</ion-content>

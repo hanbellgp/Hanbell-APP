@@ -29,6 +29,8 @@ import {PricingGroupService} from "../providers/erp/pricinggroup-service";
 import {PricingService} from "../providers/erp/pricing-service";
 import {LeaveApplicationPage} from "../pages/efgp/leave-application/leave-application.page";
 import {LeaveApplicationService} from "../providers/efgp/leave-application-service";
+import {OvertimeApplicationPage} from "../pages/efgp/overtime-application/overtime-application.page";
+import {OvertimeApplicationService} from "../providers/efgp/overtime-application-service";
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import {LeaveApplicationService} from "../providers/efgp/leave-application-servi
     PricingComponent,
     PricingGroupComponent,
     SecuserComponent,
-    LeaveApplicationPage
+    LeaveApplicationPage,
+    OvertimeApplicationPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -69,7 +72,8 @@ import {LeaveApplicationService} from "../providers/efgp/leave-application-servi
     PricingComponent,
     PricingGroupComponent,
     SecuserComponent,
-    LeaveApplicationPage
+    LeaveApplicationPage,
+    OvertimeApplicationPage
   ],
   providers: [
     CompanyService,
@@ -84,7 +88,8 @@ import {LeaveApplicationService} from "../providers/efgp/leave-application-servi
     PricingGroupService,
     PricingService,
     SecuserService,
-    LeaveApplicationService
+    LeaveApplicationService,
+    OvertimeApplicationService
   ]
 })
 export class AppModule {
