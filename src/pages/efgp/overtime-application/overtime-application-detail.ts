@@ -5,8 +5,8 @@
 export class OvertimeApplicationDetail {
 
   seq:number;
-  lunch:string;
-  dinner:string;
+  lunch:boolean;
+  dinner:boolean;
   date1:string;
   time1:string;
   time2:string;

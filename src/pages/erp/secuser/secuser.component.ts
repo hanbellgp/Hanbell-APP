@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams, AlertController, LoadingController} from 'ionic-angular';
 import {SuperComponent} from "../../../assets/super-component";
-import {SecuserService} from "../../../providers/erp/secuser-service";
+import {UserService} from "../../../providers/efgp/user-service";
 import {Secuser} from "../../../assets/secuser";
 import {Signin} from "../../signin/signin.component";
 import {Home} from "../../home/home.component";
@@ -15,13 +15,13 @@ import {Home} from "../../home/home.component";
 @Component({
   templateUrl: 'secuser.html'
 })
-export class SecuserComponent extends SuperComponent<Secuser,SecuserService> {
+export class SecuserComponent extends SuperComponent<Secuser,UserService> {
 
   opwd:string;
   npwd:string;
   rpwd:string;
 
-  constructor(navCtrl:NavController, navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:SecuserService) {
+  constructor(navCtrl:NavController, navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:UserService) {
     super(navCtrl, navParams);
     this.alertCtrl = alertCtrl;
     this.loadingCtrl = loadingCtrl;

@@ -19,7 +19,7 @@ import {InvbalService} from "../providers/erp/invbal-service";
 import {InvmasComponent} from "../pages/erp/invmas/invmas.component";
 import {InvmasService} from "../providers/erp/invmas-service";
 import {SecuserComponent} from "../pages/erp/secuser/secuser.component";
-import {SecuserService} from "../providers/erp/secuser-service";
+import {UserService} from "../providers/efgp/user-service";
 import {ItemMasterComponent} from "../pages/erp/itemmaster/itemmaster.component";
 import {ItemMasterService} from "../providers/erp/itemmaster-service";
 import {PageService} from "../providers/page-service";
@@ -87,7 +87,7 @@ import {OvertimeApplicationService} from "../providers/efgp/overtime-application
     PageService,
     PricingGroupService,
     PricingService,
-    SecuserService,
+    UserService,
     LeaveApplicationService,
     OvertimeApplicationService
   ]

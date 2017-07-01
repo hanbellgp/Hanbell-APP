@@ -31,8 +31,8 @@ export class PageService extends SuperService<Page> {
     pages.push(new Page('整机报价', ItemKindComponent, './assets/img/prod-pricing.png', PricingComponent));
     pages.push(new Page('零件库存', ItemCategoryComponent, './assets/img/parts-stock.png', InvbalComponent));
     pages.push(new Page('零件报价', ItemCategoryComponent, './assets/img/parts-pricing.png', PricingComponent));
-    pages.push(new Page('请假申请', LeaveApplicationPage, './assets/img/key.png', null));
-    pages.push(new Page('加班申请', OvertimeApplicationPage, './assets/img/key.png', null));
+    pages.push(new Page('请假申请', LeaveApplicationPage, './assets/img/leave-apply.png', null));
+    pages.push(new Page('加班申请', OvertimeApplicationPage, './assets/img/overwork.png', null));
     return pages;
 
   }

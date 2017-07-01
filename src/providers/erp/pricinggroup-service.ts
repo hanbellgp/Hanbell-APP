@@ -4,7 +4,7 @@ import {SuperService} from "../../assets/super-service";
 import {PricingGroup} from "../../pages/erp/pricinggroup/pricinggroup";
 
 /*
- Generated class for the SecuserService provider.
+ Generated class for the UserService provider.
 
  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
  for more info on providers and Angular 2 DI.

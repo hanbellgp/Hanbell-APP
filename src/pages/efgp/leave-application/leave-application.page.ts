@@ -3,7 +3,7 @@ import {NavController, NavParams, AlertController, LoadingController} from 'ioni
 import {SuperComponent} from "../../../assets/super-component";
 import {LeaveApplication} from "./leave-application";
 import {LeaveApplicationService} from "../../../providers/efgp/leave-application-service";
-import {SecuserService} from "../../../providers/erp/secuser-service";
+import {UserService} from "../../../providers/efgp/user-service";
 
 /*
  Generated class for the LeaveApplication page.
@@ -23,7 +23,7 @@ export class LeaveApplicationPage extends SuperComponent<LeaveApplication,LeaveA
     this.init();
   }
 
-  constructor(public navCtrl:NavController, public navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:LeaveApplicationService, public userService:SecuserService) {
+  constructor(public navCtrl:NavController, public navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:LeaveApplicationService, public userService:UserService) {
     super(navCtrl, navParams);
     this.alertCtrl = alertCtrl;
     this.loadingCtrl = loadingCtrl;

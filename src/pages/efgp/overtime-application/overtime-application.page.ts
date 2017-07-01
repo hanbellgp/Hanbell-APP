@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {NavController, NavParams, AlertController, LoadingController} from 'ionic-angular';
 import {SuperComponent} from "../../../assets/super-component";
 import {OvertimeApplication} from "./overtime-application";
-import {SecuserService} from "../../../providers/erp/secuser-service";
+import {UserService} from "../../../providers/efgp/user-service";
 import {OvertimeApplicationService} from "../../../providers/efgp/overtime-application-service";
 import {OvertimeApplicationDetail} from "./overtime-application-detail";
 
@@ -25,7 +25,7 @@ export class OvertimeApplicationPage extends SuperComponent<OvertimeApplication,
     this.init();
   }
 
-  constructor(public navCtrl:NavController, public navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:OvertimeApplicationService, public userService:SecuserService) {
+  constructor(public navCtrl:NavController, public navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:OvertimeApplicationService, public userService:UserService) {
     super(navCtrl, navParams);
     this.alertCtrl = alertCtrl;
     this.loadingCtrl = loadingCtrl;
@@ -51,7 +51,10 @@ export class OvertimeApplicationPage extends SuperComponent<OvertimeApplication,
   public initDetailModel():void {
     let d = new Date();
     this.overtimeApplicationDetail = new OvertimeApplicationDetail();
+    this.overtimeApplicationDetail.lunch = false;
+    this.overtimeApplicationDetail.dinner = false;
     this.overtimeApplicationDetail.date1 = d.toISOString().substring(0, 10);
+    this.overtimeApplicationDetail.hour = 0.5;
   }
 
   public submitDetail(event) {
@@ -78,7 +81,7 @@ export class OvertimeApplicationPage extends SuperComponent<OvertimeApplication,
     this.loading.present();
     this.overtimeApplication.employee = this.userService.userno;
     this.service.setDescription(this.overtimeApplication);
-    console.log(JSON.stringify(this.overtimeApplication));
+    //console.log(JSON.stringify(this.overtimeApplication));
     this.service.post(this.overtimeApplication).subscribe(data=> {
       this.responseMessage = data;
       this.loading.dismissAll();
@@ -98,6 +101,10 @@ export class OvertimeApplicationPage extends SuperComponent<OvertimeApplication,
       this.errorMessage = <any>error;
       this.showAlert("系统出错", this.errorMessage);
     });
+  }
+
+  public hourChange(e) {
+
   }
 
 }

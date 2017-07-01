@@ -3,7 +3,7 @@ import {Nav, Platform, NavParams} from 'ionic-angular';
 import {StatusBar, Splashscreen} from 'ionic-native';
 import {Home} from "../pages/home/home.component";
 import {Signin} from "../pages/signin/signin.component";
-import {SecuserService} from "../providers/erp/secuser-service";
+import {UserService} from "../providers/efgp/user-service";
 import {Page} from "../assets/page";
 import {PageService} from "../providers/page-service";
 
@@ -15,7 +15,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav:Nav;
   pageService:PageService;
-  userService:SecuserService;
+  userService:UserService;
 
   homePage:Page;
   signinPage:Page;
@@ -23,7 +23,7 @@ export class MyApp {
   errorMessage:any;
   rootPage:any = Signin;
 
-  constructor(public platform:Platform, pageService:PageService, userService:SecuserService) {
+  constructor(public platform:Platform, pageService:PageService, userService:UserService) {
 
     this.pageService = pageService;
     this.userService = userService;

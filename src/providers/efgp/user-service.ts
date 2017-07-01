@@ -4,13 +4,13 @@ import {SuperService} from "../../assets/super-service";
 import {Secuser} from "../../assets/secuser";
 
 /*
- Generated class for the SecuserService provider.
+ Generated class for the UserService provider.
 
  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
  for more info on providers and Angular 2 DI.
  */
 @Injectable()
-export class SecuserService extends SuperService<Secuser> {
+export class UserService extends SuperService<Secuser> {
 
   userno:string;
   opwd:string;
@@ -22,12 +22,11 @@ export class SecuserService extends SuperService<Secuser> {
   }
 
   protected singleAPI():string {
-    //return "/shberp/secuser/single/" + this.userno + "/" + this.opwd + '?' + this.getTimestamp();
-    return "/shberp/secuser/LDAP/single/" + this.userno + "/" + this.opwd + '?' + this.getTimestamp();
+    return "/efgp/users/LDAP/single/" + this.userno + "/" + this.opwd + '?' + this.getTimestamp();
   }
 
   protected putAPI(p:Secuser):string {
-    return "/shberp/secuser/" + p.userno + "/" + this.opwd + "/" + this.npwd + '?' + this.getTimestamp();
+    return "";
   }
 
 }

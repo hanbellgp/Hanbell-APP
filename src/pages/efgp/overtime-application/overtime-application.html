@@ -27,6 +27,14 @@
   </ion-list>
   <ion-list>
     <ion-item>
+      <ion-label>用中餐</ion-label>
+      <ion-checkbox color="primary" [(ngModel)]="overtimeApplicationDetail.lunch" name="lunch"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>用晚餐</ion-label>
+      <ion-checkbox color="primary" [(ngModel)]="overtimeApplicationDetail.dinner" name="dinner"></ion-checkbox>
+    </ion-item>
+    <ion-item>
       <ion-label>加班日期</ion-label>
       <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD"
                     [(ngModel)]="overtimeApplicationDetail.date1" name="date1"
@@ -44,13 +52,10 @@
     </ion-item>
     <ion-item-group>
       <ion-item-divider color="light">加班时数
-        <ion-badge item-right="">{{overtimeApplicationDetail.hour}}</ion-badge>
+        <ion-badge item-right="">{{overtimeApplicationDetail.hour}}小时</ion-badge>
       </ion-item-divider>
       <ion-item>
-        <ion-range min="0.5" max="12" step="0.5" [(ngModel)]="overtimeApplicationDetail.hour" name="hour">
-          <ion-label range-left>0.5</ion-label>
-          <ion-label range-right>12</ion-label>
-        </ion-range>
+        <ion-input type="number" step="0.5" [(ngModel)]="overtimeApplicationDetail.hour" name="hour"></ion-input>
       </ion-item>
     </ion-item-group>
     <ion-item>

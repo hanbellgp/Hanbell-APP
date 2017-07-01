@@ -3,7 +3,7 @@ import {NavController, NavParams, AlertController, LoadingController} from "ioni
 import {SuperComponent} from "../../../assets/super-component";
 import {Cdrcus} from "./cdrcus";
 import {CdrcusService} from "../../../providers/erp/cdrcus-service";
-import {SecuserService} from "../../../providers/erp/secuser-service";
+import {UserService} from "../../../providers/efgp/user-service";
 import {CdrcusDetailComponent} from "./cdrcus-detail.component";
 
 
@@ -20,7 +20,7 @@ export class CdrcusComponent extends SuperComponent<Cdrcus,CdrcusService> implem
     this.init();
   }
 
-  constructor(navCtrl:NavController, navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:CdrcusService, public userService:SecuserService) {
+  constructor(navCtrl:NavController, navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:CdrcusService, public userService:UserService) {
     super(navCtrl, navParams);
     this.alertCtrl = alertCtrl;
     this.loadingCtrl = loadingCtrl;

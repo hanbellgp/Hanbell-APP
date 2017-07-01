@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {Secuser} from "../../assets/secuser";
-import {SecuserService} from "../../providers/erp/secuser-service";
+import {UserService} from "../../providers/efgp/user-service";
 import {Signin} from "../signin/signin.component";
 import {SuperComponent} from "../../assets/super-component";
 import {Page} from "../../assets/page";
@@ -21,7 +21,7 @@ export class Home extends SuperComponent<Page,PageService> implements OnInit {
 
   currentUser:Secuser;
 
-  constructor(public navCtrl:NavController, public navParams:NavParams, public service:PageService, public userService:SecuserService) {
+  constructor(public navCtrl:NavController, public navParams:NavParams, public service:PageService, public userService:UserService) {
     super(navCtrl, navParams);
     this.service = service;
   }

@@ -4,7 +4,7 @@ import {SuperComponent} from "../../../assets/super-component";
 import {PricingGroup} from "./pricinggroup";
 import {PricingGroupService} from "../../../providers/erp/pricinggroup-service";
 import {PricingComponent} from "../pricing/pricing.component";
-import {SecuserService} from "../../../providers/erp/secuser-service";
+import {UserService} from "../../../providers/efgp/user-service";
 
 /*
  Generated class for the Pricinggroup page.
@@ -27,7 +27,7 @@ export class PricingGroupComponent extends SuperComponent<PricingGroup,PricingGr
     this.init();
   }
 
-  constructor(navCtrl:NavController, navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:PricingGroupService, public userService:SecuserService) {
+  constructor(navCtrl:NavController, navParams:NavParams, alertCtrl:AlertController, loadingCtrl:LoadingController, service:PricingGroupService, public userService:UserService) {
     super(navCtrl, navParams);
     this.alertCtrl = alertCtrl;
     this.loadingCtrl = loadingCtrl;

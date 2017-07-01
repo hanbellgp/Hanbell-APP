@@ -8,12 +8,12 @@
 </ion-header>
 
 <ion-content>
-  <div class="weui_grids">
-    <a class="weui_grid" *ngFor="let e of model" (click)="openPage(e)">
-      <div class="weui_grid_icon">
+  <div class="weui-grids">
+    <a href="javascript:;" class="weui-grid"  *ngFor="let e of model" (click)="openPage(e)">
+      <div class="weui-grid__icon">
         <img src="{{e.icon}}" alt="">
       </div>
-      <p class="weui_grid_label">
+      <p class="weui-grid__label">
         {{e.title}}
       </p>
     </a>

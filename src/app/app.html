@@ -10,9 +10,6 @@
       <button menuClose ion-item (click)="openPage(homePage)">
         <ion-icon name="home"> {{homePage.title}}</ion-icon>
       </button>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        <ion-icon name="apps"> {{p.title}}</ion-icon>
-      </button>
       <button menuClose ion-item (click)="openPage(signinPage)">
         <ion-icon name="exit"> {{signinPage.title}}</ion-icon>
       </button>

@@ -15,9 +15,8 @@ import 'rxjs/add/operator/switchMap';
 
 export class SuperService<T> {
 
-  protected baseUrl:string = 'http://222.69.95.246:8480/Hanbell-JRS/api';
-  //protected baseUrl:string = 'http://172.16.10.118:8480/Hanbell-JRS/api';
-  //protected baseUrl:string = 'http://172.16.80.11:8480/Hanbell-JRS/api';
+  //protected baseUrl:string = 'http://jws.hanbell.com.cn/Hanbell-JRS/api';
+  protected baseUrl:string = 'http://i2.hanbell.com.cn:8480/Hanbell-JRS/api';
   protected headers = new Headers({'Content-Type': 'application/json;charset=UTF-8'});
   protected options = new RequestOptions({headers: this.headers});
 

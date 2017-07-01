@@ -5,7 +5,7 @@ import {PricingGroup} from "../../pages/erp/pricinggroup/pricinggroup";
 import {Pricing} from "../../pages/erp/pricing/pricing";
 
 /*
- Generated class for the SecuserService provider.
+ Generated class for the UserService provider.
 
  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
  for more info on providers and Angular 2 DI.
